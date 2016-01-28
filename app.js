@@ -6,7 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var http = require('http');
 var mongoose = require('mongoose');
-var mongoLocal = ("mongodb://localhost/CostConsul");
+var mongoLocal = ("mongodb://localhost/vcTechRepair");
+var repair = require('./routes/repairApi');
 var app = express();
 
 // view engine setup
@@ -33,6 +34,7 @@ app.use(function (req, res, next) {
 
 //Load routes
 app.use(require('./routes'));
+app.use('/repair_form' , repair);
 
 mongoose.connect(process.env.MONGOLAB_URI || mongoLocal, function (error) {
   if (error) console.error(error);
@@ -60,10 +62,9 @@ app.use(function(req, res, next) {
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
+    console.log(err.message);
+    console.log(err);
+
   });
 }
 
@@ -71,10 +72,7 @@ if (app.get('env') === 'development') {
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
+  console.log(err.message);
 });
 
 });//End mongoose/server connection settings
