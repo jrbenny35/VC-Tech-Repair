@@ -21,7 +21,7 @@ var repairModel = new Schema({
       type: String,
       require: true
     },
-    details:
+    details:{
       type: String,
       require: true
     },

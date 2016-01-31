@@ -1,3 +1,3 @@
-//module.exports = {
-//    repair: require('./repairModel.js'),
-//};
+module.exports = {
+    repair: require('./repairModel.js')
+};

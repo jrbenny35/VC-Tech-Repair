@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var http = require('http');
 var mongoose = require('mongoose');
 var mongoLocal = ("mongodb://localhost/vcTechRepair");
-var repair = require('./routes/repairApi');
 var app = express();
 
 // view engine setup
@@ -34,7 +33,6 @@ app.use(function (req, res, next) {
 
 //Load routes
 app.use(require('./routes'));
-app.use('/repair_form' , repair);
 
 mongoose.connect(process.env.MONGOLAB_URI || mongoLocal, function (error) {
   if (error) console.error(error);

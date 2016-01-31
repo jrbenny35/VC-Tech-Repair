@@ -1,0 +1,38 @@
+{
+  "name": "VC-Tech-Repair",
+  "description": "Valencia Tech Club repair database online access",
+  "main": "",
+  "authors": [
+    "jrbenny35 <benjr@bennyjr.xyz>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jrbenny35/VC-Tech-Repair",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/javascripts/vendor",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "moment": "^2.11.1"
+  },
+  "dependencies": {
+    "angular": "^1.4.9",
+    "angular-animate": "^1.4.9",
+    "angular-route": "^1.4.9",
+    "angular-resource": "^1.4.9",
+    "angular-messages": "^1.4.9",
+    "angular-material": "^1.0.4",
+    "angular-material-icons": "^0.6.0",
+    "angular-moment": "^0.10.3",
+    "moment": "^2.11.1",
+    "angular-ui-router": "^0.2.17"
+  }
+}
