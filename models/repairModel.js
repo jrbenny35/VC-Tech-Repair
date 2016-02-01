@@ -9,6 +9,14 @@ var repairModel = new Schema({
       type: String,
       require: true
     },
+    email:{
+      type: String,
+      require: true
+    },
+    phoneNumber:{
+      type: String,
+      require: true
+    },
     vID:{
       type: String,
       require: true
@@ -26,6 +34,14 @@ var repairModel = new Schema({
       require: true
     },
     issuedBy:{
+      type: String,
+      require: true
+    },
+    message:{
+      type: String,
+      require: true
+    },
+    number:{
       type: String,
       require: true
     }
