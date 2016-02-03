@@ -1,0 +1,17 @@
+div.container()
+  md-content
+    md-card(layout-padding)
+      md-card-content
+        h1 Name: {{ repair.name }}
+        h3 vID: {{ repair.vID }}
+        h3 Email: {{ repair.email }}
+        h3 Phone Number {{ repair.phoneNumber }}
+        h3 Service Number: {{ repair.number }}
+        h3 Service Date: {{ repair.date }}
+        h3 Service Details: {{ repair.details }}
+        h3 Service Provided: {{ repair.service }}
+        h3 Service Done By: {{ repair.issuedBy }}
+        h3 Service Message: {{ repair.message }}
+        button.md-button.md-raised.md-primary(ui-sref='admin') Back
+        
+  

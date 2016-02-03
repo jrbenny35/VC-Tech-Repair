@@ -26,6 +26,16 @@ myApp.config(function ($stateProvider, $locationProvider) {
             url: '/repair_form',
             templateUrl: 'partials/repair',
             controller: 'RepairFormCtrl'
+        })
+        .state('repairFormEdit', {
+          url: '/repair_form/:id/edit',
+          templateUrl: 'partials/repair',
+          controller: 'RepairFormEditCtrl'
+        })
+        .state('repairFormView', {
+          url: '/repair_form/:id/view',
+          templateUrl: 'partials/repairView',
+          controller: 'RepairFormViewCtrl'
         });
 
 

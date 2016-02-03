@@ -5,17 +5,13 @@ html(ng-app='VCTR')
     meta(name='description', content='')
     meta(name='viewport', content="initial-scale=1, maximum-scale=1, user-scalable=no")
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic')
-    link(rel='stylesheet', href='javascripts/vendor/angular-material/angular-material.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.4/angular-material.css')
     link(rel='stylesheet', href='/dist/stylesheets/main.min.css')
     base(href='/')
   body
     md-content#main
     div#mainView(ui-view='' layout='column')
     
-    
-
-
-
   script(type="text/javascript" src='/javascripts/vendor/angular/angular.js')
   script(type='text/javascript' src='/javascripts/vendor/angular-messages/angular-messages.min.js')
   script(type="text/javascript" src='/javascripts/vendor/angular-resource/angular-resource.js')

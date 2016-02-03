@@ -16,6 +16,6 @@ div(style='margin-top: 25px;').wideContainer
           div(flex='20' style='border-bottom: 1px solid black')
             p Service date:  {{ repair.date | amDateFormat: 'dddd, MMMM Do YYYY' }}
           div(flex='20' layout='row' style='margin: auto;')
-            md-button.md-raised(ng-click='deletePost(repair._id)') Delete
-            md-button.md-raised(ui-sref='blogEdit({id: repair._id})') Edit
-            md-button.md-raised(ui-sref='blogView({id: repair._id})') View
+            button.md-button.md-raised(ng-click='deletePost(repair._id)' ui-sref='admin') Delete
+            button.md-button.md-raised(ui-sref='repairFormEdit({id: repair._id})') Edit
+            button.md-button.md-raised(ui-sref='repairFormView({id: repair._id})') View

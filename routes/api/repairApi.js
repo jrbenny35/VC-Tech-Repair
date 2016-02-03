@@ -26,11 +26,11 @@ router.route('/repair')
     var repair = new models.repair();
 
     repair.name = req.body.name;
-    repair.vId = req.body.vID;
+    repair.vID = req.body.vID;
     repair.service = req.body.service;
     repair.date = req.body.date;
     repair.details = req.body.details;
-    repair.issedBy = req.body.issuedBy;
+    repair.issuedBy = req.body.issuedBy;
     repair.message = req.body.message;
     repair.number = req.body.number;
     repair.email = req.body.email;
