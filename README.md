@@ -2,9 +2,9 @@
 Valencia College Tech Club Computer Repair Website
 
 ## Website Goals
-* Provide a database to store repair forms
-* Provide a GUI for VCTechClub staff to access database
-* Provide basic database functions (Reports, Transactions) as well as custom functions (Searches)
+* Provide a database to store repair forms.
+* Provide a GUI for VCTechClub staff to access database.
+* Provide basic database functions (Reports, Transactions) as well as custom functions (Searches).
 
 ### Version 0.0.1
 
@@ -14,7 +14,7 @@ Valencia College Tech Club Computer Repair Website
 * [AngularJS](http://www.angularjs.org): Google's frontend framework. MVC, powerful, and really just AWESOME.
 * [Express](http://www.expressjs.com): A nice framework for node. Helps keep things pretty and is easy to use
 * [jQuery](http://www.jquery.com): Well I think JQuery can speak for itself...
-* [Jade](http://www.jade-lang.com): Who like to write HTML with ending tags anyways?
+* [Jade](http://www.jade-lang.com): Who likes to write HTML with ending tags anyways?
 * [Grunt](http://www.gruntjs.com): The man behind the work. Lots of plugins available and it is easy to setup!
 * [Bower](http://www.bower.io): Package manager used for some resources not available on NPM.
 * [SASS](http://www.sass-lang.com): Makes writing CSS fun and gives you some added tools such as variables, and mixins.
@@ -30,6 +30,7 @@ Each sub-directory and folder will have a readme doc talking about and explainin
 ## Main Directory
 
  - The main directory houses the server and routes as well as serving as the primary parent folder for the node server.
+ - Models sub-folder: Contains the models needed for Mongo DB.
  - Public sub-folder: Houses "Public" elements of the site, i.e. Javascript and Stylesheets.
  - Routes sub-folder: A folder for all of the Javascript handling the routes, as well as the API's.
  - Views sub-folder: Used as a path in jade, contains all of the jade, or html needed to create the page.
