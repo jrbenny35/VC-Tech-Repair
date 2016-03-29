@@ -3,8 +3,10 @@
 var express = require('express');
 var router = express.Router();
 var app = express();
+var encrypt = require('crypto-js');
 
 var models = require('../../models/index');
+var secret = 'hello';
 
 /* Repair Form Api */
 router.route('/repair')
@@ -24,9 +26,10 @@ router.route('/repair')
   .post(function(req, res){
 
     var repair = new models.repair();
+    var vID;
 
     repair.name = req.body.name;
-    repair.vID = req.body.vID;
+    //repair.vID = req.body.vID;
     repair.service = req.body.service;
     repair.date = req.body.date;
     repair.details = req.body.details;
@@ -35,6 +38,10 @@ router.route('/repair')
     repair.number = req.body.number;
     repair.email = req.body.email;
     repair.phoneNumber = req.body.phoneNumber;
+
+    vID = encrypt.AES.encrypt(req.body.vID, secret);
+
+    repair.vID = vID;
 
     repair.save(function(err, repair){
       if (!err) {
@@ -53,7 +60,9 @@ router.route('/repair/:id')
     .get(function(req, res){
       models.repair.findById(req.params.id, function (err, repair) {
          if (!err) {
-             return res.json(repair);
+            var decryptedData = encrypt.AES.decrypt(repair.vID.toString(), secret);
+            repair.vID = decryptedData.toString(encrypt.enc.Utf8);
+            return res.json(repair);
 
          } else {
              return console.log(err);
@@ -99,4 +108,5 @@ router.route('/repair/:id')
               }
           });
     })//End delete function
+
 module.exports = router;
