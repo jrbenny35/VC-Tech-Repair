@@ -60,7 +60,7 @@ router.route('/repair/:id')
     .get(function(req, res){
       models.repair.findById(req.params.id, function (err, repair) {
          if (!err) {
-            var decryptedData = encrypt.AES.decrypt(repair.vID.toString(), secret);
+            let decryptedData = encrypt.AES.decrypt(repair.vID.toString(), secret);
             repair.vID = decryptedData.toString(encrypt.enc.Utf8);
             return res.json(repair);
 
