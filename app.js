@@ -8,6 +8,7 @@ var http = require('http');
 var mongoose = require('mongoose');
 var mongoLocal = ("mongodb://localhost/vcTechRepair");
 var app = express();
+var CryptoJS = require('crypto-js');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
