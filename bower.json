@@ -22,7 +22,7 @@
   ],
   "resolutions": {
     "moment": "^2.11.1",
-    "angular": "1.5.1"
+    "angular": "^1.4.9"
   },
   "dependencies": {
     "angular": "^1.4.9",
